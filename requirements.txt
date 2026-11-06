@@ -1,0 +1,26 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9      # form + file uploads / OAuth2 password form
+pydantic>=2.6
+pyodbc>=5.1                  # needs "ODBC Driver 18 for SQL Server" installed on the host
+bcrypt>=4.1
+PyJWT>=2.8
+numpy>=1.26
+scipy>=1.11
+azure-storage-blob>=12.19
+azure-identity>=1.15         # only needed for managed-identity blob access
+python-dotenv>=1.0           # local development only
+
+# ---- .env.example (copy to .env, add .env to .gitignore) ----
+# DB_SERVER=myserver.database.windows.net
+# DB_NAME=evt_risk
+# DB_USER=evt_api
+# DB_PASSWORD=<from Key Vault>
+# JWT_SECRET=<python -c "import secrets; print(secrets.token_urlsafe(48))">
+# AZURE_STORAGE_CONNECTION_STRING=<from Key Vault>
+# BLOB_CONTAINER=raw-csv-uploads
+# CORS_ORIGINS=https://your-frontend.example.com
+# SEED_DEMO_USERS=1
+# DEMO_QUANT_PASSWORD=<12+ chars>
+# DEMO_VIEWER_PASSWORD=<12+ chars>
+# ENV=production

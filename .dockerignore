@@ -1,0 +1,27 @@
+# Version control and editor state
+.git
+.vscode
+.idea
+
+# Python environments and generated files
+.venv
+venv
+.envdir
+__pycache__
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local data and logs
+*.log
+*.sqlite3
+.DS_Store
+Thumbs.db
